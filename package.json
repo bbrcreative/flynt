@@ -1,6 +1,6 @@
 {
   "name": "flynt",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "main": "index.js",
   "repository": "git@github.com:flyntwp/flynt.git",
   "author": "bleech <hello@bleech.de>",
@@ -16,12 +16,11 @@
     "lint": "run-p --silent lint:*",
     "lint:scripts": "cross-env eslint '**/*.js'",
     "lint:styles": "cross-env stylelint '**/*.scss'",
-    "lint:php": "cross-env ./vendor/bin/phpcs --standard=phpcs.ruleset.xml",
+    "lint:php": "cross-env ./vendor/bin/phpcs",
     "lint:scripts:fix": "cross-env eslint '**/*.js' --fix",
     "lint:styles:fix": "cross-env stylelint '**/*.scss' --fix",
-    "lint:php:fix": "cross-env ./vendor/bin/phpcbf --standard=phpcs.ruleset.xml",
-    "release": "standard-version -a",
-    "releaseGithub": "conventional-github-releaser -p angular"
+    "lint:php:fix": "cross-env ./vendor/bin/phpcbf",
+    "release": "standard-version -a"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
@@ -36,7 +35,6 @@
     "browser-sync": "^2.26.7",
     "check-node-version": "^4.0.1",
     "console-polyfill": "^0.3.0",
-    "conventional-github-releaser": "^3.1.3",
     "copy-webpack-plugin": "^5.0.4",
     "core-js": "^3.3.4",
     "countup.js": "^2.0.4",
